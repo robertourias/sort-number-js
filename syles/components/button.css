@@ -1,0 +1,136 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font: 600 16px/1.5 var(--font-roboto);
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: all 0.6s ease;  
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    border-radius: 8px;   
+    background: linear-gradient(91.26deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    z-index: -2;
+  }
+
+  &:after {
+    background: #24222E;    
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::before {
+      animation: hover-animated 1s linear forwards;
+    }
+
+    &::after {
+      background: #111012;
+      margin: 2px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);      
+    }
+  }
+
+  &.btn-primary {
+    img {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      img {
+        animation: arrow-move 2s linear forwards;
+      }
+    }
+  }
+
+  &.btn-again {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .animated {
+        animation: arrow-circle 1s linear forwards;
+      }
+    }
+  }
+}
+
+.animate-icon {  
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+  .animated {
+    position: absolute;
+    inset: 0;
+  }
+
+  .fixed {
+    position: absolute;
+    inset: 7px;
+  }
+}
+
+@keyframes arrow-move {
+  0% {
+    transform: translateX(0px);
+  }
+  40% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hover-animated {
+  0% {
+    background: linear-gradient(91.26deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  20% {
+    background: linear-gradient(163.26deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  40% {
+    background: linear-gradient(235.26deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  60% {
+    background: linear-gradient(307.26deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  80% {
+    background: linear-gradient(19.26deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+  100% {
+    background: linear-gradient(91.26deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+  }
+}
+
+@keyframes arrow-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+ 
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
