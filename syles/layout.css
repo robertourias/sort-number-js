@@ -2,4 +2,35 @@
   padding: 44px 35px;
   max-width: 1098px;
   margin-inline: auto;
+
+  display: grid;
+  grid-template-areas: 
+  'header header'
+  'title sort'
+  'information sort';
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 46px;
+
+  @media (width >= 1098px) {
+    margin-bottom: 89px;
+    justify-content: flex-start ;
+  }
+  grid-area: header;
+}
+
+section.title {
+  grid-area: title;
+}
+
+section.sort {
+  grid-area: sort;
+}
+
+section.information {
+  grid-area: information;
 }
