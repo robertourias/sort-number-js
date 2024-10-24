@@ -46,21 +46,21 @@
             <div class="field-wrapper numbers">
              <label for="numbers">números</label>
              <div class="field">
-               <input type="text" id="numbers" name="numbers" min="1" required  maxlength="2"/>              
+               <input type="text" class="field-numbers" id="numbers" name="numbers" min="1" required  maxlength="2"/>              
              </div>
             </div>
      
             <div class="field-wrapper of">
              <label for="of">de</label>
              <div class="field">
-               <input type="text" id="of" name="of" min="1" required maxlength="2"/>
+               <input type="text" class="input-numbers" id="of" name="of" min="1" required maxlength="2"/>
              </div>
             </div>
      
             <div class="field-wrapper until">
              <label for="until">até</label>
              <div class="field">
-               <input type="text" id="until" name="until" min="1" required maxlength="3"/>              
+               <input type="text" class="input-numbers" id="until" name="until" min="1" required maxlength="3"/>              
              </div>
             </div>
           </div>
@@ -88,7 +88,7 @@
             <div class="result">46</div>            
           </div>
      
-          <button class="btn btn-again" type="submit">
+          <button class="btn btn-again" type="button">
             Sortear novamente 
             <div class="animate-icon">
               <img src="./assets/icon-arrow-circle.svg" alt="seta" class="animated">
@@ -99,5 +99,6 @@
       </section>
     </main>
   </div>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>

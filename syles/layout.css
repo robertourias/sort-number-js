@@ -50,11 +50,12 @@ section.sort {
   }
 
   &.first-view {
-    display: none;
+    display: block;
   }
 
-  &.result-view {    
+  &.result-view {  
     display: flex;
+    display: none;  
     flex-direction: column;
     width: 100%;
 
