@@ -64,8 +64,14 @@
   }
 
   &.btn-again {
+    transition: opacity 0.3s ease;
     display: flex;
     align-items: center;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
 
     &:hover {
       .animated {

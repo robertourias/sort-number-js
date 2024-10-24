@@ -1,4 +1,4 @@
-.results {
+.results {  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   min-height: 170px;
   margin-top: 40px;
-  max-width: 400px;
+  /* max-width: 400px; */
   margin: 0 auto 40px;
 
   .result {
@@ -19,7 +19,7 @@
     color: #000;
     position: relative;
     z-index: 2;
-    animation: font-number 0.3s 1.9s linear forwards;
+    animation: font-number 0.3s 1s linear forwards;
 
     &::before {
       content: '';
@@ -28,7 +28,7 @@
       border-radius: 28px;
       z-index: -1;   
       background-color: #C58DE7;       
-      animation: show-number 2s ease-in-out forwards;        
+      animation: show-number 1.2s ease-in-out forwards;        
     }
   }
 }
