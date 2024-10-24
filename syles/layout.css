@@ -6,7 +6,7 @@
 
 .main {
   display: grid;  
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   grid-template-areas: 
   'header'
@@ -47,6 +47,57 @@ section.sort {
 
   @media (width >= 1098px) { 
     margin-left: 108px;
+  }
+
+  &.first-view {
+    display: none;
+  }
+
+  &.result-view {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h3, p {
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+
+    .results {      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      min-height: 170px;
+      margin-top: 40px;
+      max-width: 400px;
+      margin: 0 auto 40px;
+
+      .result {
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+        width: 100px;
+        height: 100px;
+        font: 400 48px/1.5 var(--font-roboto);
+        color: #C58DE7;
+        position: relative;
+        z-index: 2;
+
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          /* background-color: #C58DE7; */
+          border-radius: 28px;
+          z-index: -1;          
+        }
+        
+      }
+    }
   }
 
 

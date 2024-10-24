@@ -27,7 +27,7 @@
     inset: 0;
     border-radius: 8px;   
     background: linear-gradient(91.26deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
-    z-index: -2;
+    z-index: -1;
   }
 
   &:after {
