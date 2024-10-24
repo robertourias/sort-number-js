@@ -41,6 +41,10 @@
 
 section.title {
   grid-area: title;
+
+  @media (width >= 1098px) { 
+    min-width: 580px;    
+  }
 }
 
 section.sort {
@@ -51,6 +55,7 @@ section.sort {
 
   @media (width >= 1098px) {
     width: 30vw;
+    max-width: 400px;
   }
 
   &.first-view {
